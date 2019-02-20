@@ -8,6 +8,15 @@ use Doctrine\ORM\Query;
 
 class HomePageContent implements HomePageContentInterface
 {
+    /**
+     * @var EntityManager
+     */
+    private $entityManager;
+    
+    public function __construct(EntityManager $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
 
     /**
      * Home Page Content
